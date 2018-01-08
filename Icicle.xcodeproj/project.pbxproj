@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */; };
-		EDBABE92200408A9009FFAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE91200408A9009FFAD4 /* ViewController.swift */; };
+		EDBABE92200408A9009FFAD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE91200408A9009FFAD4 /* LoginViewController.swift */; };
 		EDBABE95200408A9009FFAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE93200408A9009FFAD4 /* Main.storyboard */; };
 		EDBABE97200408A9009FFAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE96200408A9009FFAD4 /* Assets.xcassets */; };
 		EDBABE9A200408A9009FFAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		EDBABE8C200408A9009FFAD4 /* Icicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Icicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDBABE91200408A9009FFAD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDBABE91200408A9009FFAD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDBABE94200408A9009FFAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDBABE96200408A9009FFAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBABE99200408A9009FFAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */,
-				EDBABE91200408A9009FFAD4 /* ViewController.swift */,
+				EDBABE91200408A9009FFAD4 /* LoginViewController.swift */,
 				EDBABE93200408A9009FFAD4 /* Main.storyboard */,
 				EDBABE96200408A9009FFAD4 /* Assets.xcassets */,
 				EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */,
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBABE92200408A9009FFAD4 /* ViewController.swift in Sources */,
+				EDBABE92200408A9009FFAD4 /* LoginViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +414,7 @@
 				EDBABEAB200408A9009FFAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDBABEAC200408A9009FFAD4 /* Build configuration list for PBXNativeTarget "IcicleTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				EDBABEAE200408A9009FFAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
