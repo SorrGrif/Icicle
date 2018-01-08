@@ -157,6 +157,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogOutButtonOnClick:" destination="hSx-Ca-NBN" eventType="touchUpInside" id="7dK-kt-5gC"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWR-0Q-xHE">
                                 <rect key="frame" x="16" y="362" width="343" height="227"/>
@@ -259,6 +262,12 @@
                             <constraint firstItem="xWR-0Q-xHE" firstAttribute="centerX" secondItem="msj-kT-drE" secondAttribute="centerX" id="xaB-Ca-Jjb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CompanyLabel" destination="xS0-UL-wBm" id="gfJ-J7-4ix"/>
+                        <outlet property="PositionLabel" destination="9AL-nC-1gn" id="nSa-CY-akH"/>
+                        <outlet property="ProfileNameLabel" destination="Uos-0U-13n" id="5sY-QS-uVd"/>
+                        <outlet property="SalaryLabel" destination="qya-kL-6yJ" id="iyG-eX-VYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmp-Ig-kZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
