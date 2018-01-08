@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hSx-Ca-NBN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -83,7 +83,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-166" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8oN-Wa-a5w">
+            <objects>
+                <viewController id="hSx-Ca-NBN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TSl-bt-OWp"/>
+                        <viewControllerLayoutGuide type="bottom" id="JPZ-8T-Vcj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0L7-Ae-E5w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJk-cd-trk">
+                                <rect key="frame" x="123" y="28" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.81197376943005184" green="0.091874487929530749" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="OdP-R7-9No"/>
+                                    <constraint firstAttribute="height" constant="128" id="n1V-PU-ATN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST LAST" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uos-0U-13n">
+                                <rect key="frame" x="116.5" y="182" width="142.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ip-jb-kng">
+                                <rect key="frame" x="66" y="254.5" width="86.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF4-6M-s3P">
+                                <rect key="frame" x="66" y="292.5" width="71.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-df-RRU">
+                                <rect key="frame" x="66" y="330.5" width="55.5" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LORUM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS0-UL-wBm">
+                                <rect key="frame" x="240" y="254.5" width="69" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPSUM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AL-nC-1gn">
+                                <rect key="frame" x="248" y="292.5" width="61" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOLOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qya-kL-6yJ">
+                                <rect key="frame" x="242" y="330.5" width="67" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-kT-drE">
+                                <rect key="frame" x="87" y="597" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.81197376943005184" green="0.81197376943005184" blue="0.81197376943005184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hfp-Vl-Ui3"/>
+                                    <constraint firstAttribute="height" constant="50" id="w2a-qp-SUy"/>
+                                </constraints>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9AL-nC-1gn" secondAttribute="trailing" constant="50" id="106-Si-GX9"/>
+                            <constraint firstItem="Uos-0U-13n" firstAttribute="top" secondItem="kJk-cd-trk" secondAttribute="bottom" constant="26" id="7bJ-KI-svu"/>
+                            <constraint firstItem="rCR-df-RRU" firstAttribute="leading" secondItem="0L7-Ae-E5w" secondAttribute="leadingMargin" constant="50" id="Bda-EI-tSx"/>
+                            <constraint firstItem="ZF4-6M-s3P" firstAttribute="top" secondItem="9ip-jb-kng" secondAttribute="bottom" constant="14" id="Dbl-IJ-XgD"/>
+                            <constraint firstItem="9AL-nC-1gn" firstAttribute="top" secondItem="xS0-UL-wBm" secondAttribute="bottom" constant="14" id="EBg-iC-bJA"/>
+                            <constraint firstItem="rCR-df-RRU" firstAttribute="top" secondItem="ZF4-6M-s3P" secondAttribute="bottom" constant="14" id="FdI-dO-cLT"/>
+                            <constraint firstItem="msj-kT-drE" firstAttribute="centerX" secondItem="0L7-Ae-E5w" secondAttribute="centerX" id="Gxw-AZ-kdf"/>
+                            <constraint firstItem="qya-kL-6yJ" firstAttribute="top" secondItem="9AL-nC-1gn" secondAttribute="bottom" constant="14" id="O6U-Et-WQQ"/>
+                            <constraint firstItem="9ip-jb-kng" firstAttribute="top" secondItem="Uos-0U-13n" secondAttribute="bottom" constant="39" id="TDl-2w-InF"/>
+                            <constraint firstItem="kJk-cd-trk" firstAttribute="centerX" secondItem="Uos-0U-13n" secondAttribute="centerX" id="Vmp-E4-vS1"/>
+                            <constraint firstItem="kJk-cd-trk" firstAttribute="top" secondItem="TSl-bt-OWp" secondAttribute="bottom" constant="8" id="X6S-GN-lrB"/>
+                            <constraint firstItem="kJk-cd-trk" firstAttribute="centerX" secondItem="0L7-Ae-E5w" secondAttribute="centerX" id="YBf-V5-lub"/>
+                            <constraint firstItem="ZF4-6M-s3P" firstAttribute="leading" secondItem="0L7-Ae-E5w" secondAttribute="leadingMargin" constant="50" id="Yxc-Zn-EEa"/>
+                            <constraint firstItem="9ip-jb-kng" firstAttribute="leading" secondItem="0L7-Ae-E5w" secondAttribute="leadingMargin" constant="50" id="cqy-TB-HcM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qya-kL-6yJ" secondAttribute="trailing" constant="50" id="eGt-zk-UJo"/>
+                            <constraint firstItem="JPZ-8T-Vcj" firstAttribute="top" secondItem="msj-kT-drE" secondAttribute="bottom" constant="20" id="g5r-NG-uD7"/>
+                            <constraint firstItem="xS0-UL-wBm" firstAttribute="top" secondItem="Uos-0U-13n" secondAttribute="bottom" constant="39" id="lcz-mW-RbA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xS0-UL-wBm" secondAttribute="trailing" constant="50" id="sMj-dr-ExD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmp-Ig-kZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="791"/>
         </scene>
     </scenes>
 </document>
