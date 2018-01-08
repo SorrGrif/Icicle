@@ -55,6 +55,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klM-c8-jOc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember: Don't share your login credentials" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO1-uS-fbZ">
                                 <rect key="frame" x="13.5" y="422" width="348.5" height="21"/>
@@ -80,6 +83,10 @@
                             <constraint firstItem="bs3-ei-Vn3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="yMP-h7-IMc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="EmailTextField" destination="ueC-Rg-in2" id="eqJ-98-o8t"/>
+                        <outlet property="PasswordTextField" destination="bs3-ei-Vn3" id="Trc-mT-AOh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
