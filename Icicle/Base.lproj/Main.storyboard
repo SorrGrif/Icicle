@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-166" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="8oN-Wa-a5w">
             <objects>
-                <viewController id="hSx-Ca-NBN" sceneMemberID="viewController">
+                <viewController id="hSx-Ca-NBN" customClass="ProfileViewController" customModule="Icicle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSl-bt-OWp"/>
                         <viewControllerLayoutGuide type="bottom" id="JPZ-8T-Vcj"/>
