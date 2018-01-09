@@ -47,7 +47,7 @@ class User
                 "sorrgrif" :
                     [
                         "login":"sorrgrif",
-                        "password":"griffin",
+                        "password":"griffin1",
                         "name":"Griffin Sorrentino",
                         "company":"FakeComp co.",
                         "position":"Mobile App Dev",
