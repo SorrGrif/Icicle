@@ -23,8 +23,10 @@ class ProfileViewController: UIViewController {
     {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        
         //Init the user object with the current user and gather the current users information
-        user = User(currentUser: "sorrgrif")
+        user = User(currentUser: defaults.value(forKey: "user") as! String)
         
         //populate the labels with the users information
         ProfileNameLabel.text = user!.name
@@ -40,7 +42,11 @@ class ProfileViewController: UIViewController {
     
     @IBAction func LogOutButtonOnClick(_ sender: Any)
     {
+        //reset the userdefaults
+        let defaults = UserDefaults.standard
         
+        defaults.set("", forKey: "user")
+        defaults.set(false, forKey: "loggedin")
     }
     
 }
