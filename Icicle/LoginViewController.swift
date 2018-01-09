@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var UserNameTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
     
@@ -26,7 +26,10 @@ class LoginViewController: UIViewController {
 
     @IBAction func LoginButtonOnClick(_ sender: Any)
     {
+        //when the login button is clicked, attempt to login with the given username and password
         
+        
+        //if the login is incorrect, prevent the user from gaining access
     }
 
 }

@@ -84,8 +84,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailTextField" destination="ueC-Rg-in2" id="eqJ-98-o8t"/>
                         <outlet property="PasswordTextField" destination="bs3-ei-Vn3" id="Trc-mT-AOh"/>
+                        <outlet property="UserNameTextField" destination="ueC-Rg-in2" id="ZUG-Qj-jbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
