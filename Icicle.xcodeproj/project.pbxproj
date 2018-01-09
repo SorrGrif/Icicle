@@ -14,6 +14,7 @@
 		EDBABEA5200408A9009FFAD4 /* IcicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEA4200408A9009FFAD4 /* IcicleTests.swift */; };
 		EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */; };
 		EDC5C414200558EB00F907A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE91200408A9009FFAD4 /* LoginViewController.swift */; };
+		EDC5C41820055AC600F907A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5C41720055AC600F907A8 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		EDBABEA4200408A9009FFAD4 /* IcicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcicleTests.swift; sourceTree = "<group>"; };
 		EDBABEA6200408A9009FFAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EDC5C41720055AC600F907A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */,
 				EDBABE9B200408A9009FFAD4 /* Info.plist */,
 				EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */,
+				EDC5C41720055AC600F907A8 /* User.swift */,
 			);
 			path = Icicle;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC5C41820055AC600F907A8 /* User.swift in Sources */,
 				EDC5C414200558EB00F907A8 /* LoginViewController.swift in Sources */,
 				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,

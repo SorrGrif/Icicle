@@ -10,16 +10,24 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    
+    //MARK: Outlets
     @IBOutlet weak var ProfileNameLabel: UILabel!
     @IBOutlet weak var CompanyLabel: UILabel!
     @IBOutlet weak var PositionLabel: UILabel!
     @IBOutlet weak var SalaryLabel: UILabel!
 
+    //MARK: Objects
+    var user: User?
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        user = User(currentUser: "sorrgrif")
+        //Init the user object to gather the current user in question
+        ProfileNameLabel.text = user!.name
+        CompanyLabel.text = user!.company
+        PositionLabel.text = user!.position
+        SalaryLabel.text = "$\(user!.salary)"
     }
     
     override func didReceiveMemoryWarning() {
