@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         let defaults = UserDefaults.standard;
         
         //set the logged in user to the userdefaults
-        defaults.set(user, forKey: "user")
+        defaults.set(user.username, forKey: "user")
         defaults.set(true, forKey: "loggedin")
     }
 

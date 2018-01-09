@@ -22,7 +22,6 @@ class User
     //MARK: Users List
     var userList: [String : [String: String]]?
     
-
     init(currentUser: String)
     {
         //this will retrieve the list of users from the server
