@@ -84,6 +84,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="FooterLabel" destination="HO1-uS-fbZ" id="JU0-US-xra"/>
                         <outlet property="PasswordTextField" destination="bs3-ei-Vn3" id="Trc-mT-AOh"/>
                         <outlet property="UserNameTextField" destination="ueC-Rg-in2" id="ZUG-Qj-jbl"/>
                     </connections>

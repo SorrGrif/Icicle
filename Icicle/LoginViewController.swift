@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var UserNameTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
-    
+    @IBOutlet weak var FooterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,13 @@ class LoginViewController: UIViewController {
         
         let user = User(currentUser: username)
         
+        FooterLabel.text = "Incorrect Username!"
         if(user.login == username)
         {
+            FooterLabel.text = "Incorrect Password!"
             if(user.password == password)
             {
+                FooterLabel.text = "Remember: Don't share you login credentials"
                 print("lucky")
             }
         }
