@@ -22,8 +22,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //Init the user object with the current user and gather the current users information
         user = User(currentUser: "sorrgrif")
-        //Init the user object to gather the current user in question
+        
+        //populate the labels with the users information
         ProfileNameLabel.text = user!.name
         CompanyLabel.text = user!.company
         PositionLabel.text = user!.position
