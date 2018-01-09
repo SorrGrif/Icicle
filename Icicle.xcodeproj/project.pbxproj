@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */; };
-		EDBABE92200408A9009FFAD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE91200408A9009FFAD4 /* LoginViewController.swift */; };
 		EDBABE95200408A9009FFAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE93200408A9009FFAD4 /* Main.storyboard */; };
 		EDBABE97200408A9009FFAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE96200408A9009FFAD4 /* Assets.xcassets */; };
 		EDBABE9A200408A9009FFAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */; };
 		EDBABEA5200408A9009FFAD4 /* IcicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEA4200408A9009FFAD4 /* IcicleTests.swift */; };
 		EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */; };
+		EDC5C414200558EB00F907A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE91200408A9009FFAD4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,9 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBABE92200408A9009FFAD4 /* LoginViewController.swift in Sources */,
+				EDC5C414200558EB00F907A8 /* LoginViewController.swift in Sources */,
 				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
-				EDBABE92200408A9009FFAD4 /* ViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
