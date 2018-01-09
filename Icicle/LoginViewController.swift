@@ -27,9 +27,19 @@ class LoginViewController: UIViewController {
     @IBAction func LoginButtonOnClick(_ sender: Any)
     {
         //when the login button is clicked, attempt to login with the given username and password
+        let username = UserNameTextField.text!
+        let password = PasswordTextField.text!
         
+        let user = User(currentUser: username)
         
-        //if the login is incorrect, prevent the user from gaining access
+        if(user.login == username)
+        {
+            if(user.password == password)
+            {
+                print("lucky")
+            }
+        }
+        
     }
 
 }
