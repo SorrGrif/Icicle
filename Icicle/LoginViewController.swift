@@ -39,10 +39,20 @@ class LoginViewController: UIViewController {
             if(user.password == password)
             {
                 FooterLabel.text = "Remember: Don't share you login credentials"
-                print("lucky")
+                login(user: user)
             }
         }
         
+    }
+    
+    func login(user: User)
+    {
+        //get the userdefaults so we can add key value pairs
+        let defaults = UserDefaults.standard;
+        
+        //set the logged in user to the userdefaults
+        defaults.set(user, forKey: "user")
+        defaults.set(true, forKey: "loggedin")
     }
 
 }
