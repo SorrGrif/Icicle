@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         let user = User(currentUser: username)
         
         FooterLabel.text = "Incorrect Username!"
-        if(user.login == username)
+        if(user.username == username)
         {
             FooterLabel.text = "Incorrect Password!"
             if(user.password == password)

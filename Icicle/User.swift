@@ -12,7 +12,7 @@ import CoreData
 class User
 {
     //MARK: User Details
-    var login = "N/A"
+    var username = "N/A"
     var password = "N/A"
     var name = "N/A"
     var company = "N/A"
@@ -46,7 +46,7 @@ class User
             [
                 "sorrgrif" :
                     [
-                        "login":"sorrgrif",
+                        "username":"sorrgrif",
                         "password":"griffin1",
                         "name":"Griffin Sorrentino",
                         "company":"FakeComp co.",
@@ -55,7 +55,7 @@ class User
                     ],
                 "itbrown" :
                     [
-                        "login":"itbrown",
+                        "username":"itbrown",
                         "password":"aperture",
                         "name":"Brandon \"I.T.\" Brown",
                         "company":"FakeComp co.",
@@ -76,7 +76,7 @@ class User
             //if the user exists populate each field with the respective values
             if currentUser == user.key
             {
-                login = user.value["login"]!
+                username = user.value["username"]!
                 password = user.value["password"]!
                 name = user.value["name"]!
                 company = user.value["company"]!
