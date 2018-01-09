@@ -13,6 +13,7 @@
 		EDBABE97200408A9009FFAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE96200408A9009FFAD4 /* Assets.xcassets */; };
 		EDBABE9A200408A9009FFAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */; };
 		EDBABEA5200408A9009FFAD4 /* IcicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEA4200408A9009FFAD4 /* IcicleTests.swift */; };
+		EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EDBABEA0200408A9009FFAD4 /* IcicleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcicleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBABEA4200408A9009FFAD4 /* IcicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcicleTests.swift; sourceTree = "<group>"; };
 		EDBABEA6200408A9009FFAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				EDBABE96200408A9009FFAD4 /* Assets.xcassets */,
 				EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */,
 				EDBABE9B200408A9009FFAD4 /* Info.plist */,
+				EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */,
 			);
 			path = Icicle;
 			sourceTree = "<group>";
@@ -202,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBABE92200408A9009FFAD4 /* LoginViewController.swift in Sources */,
+				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
+				EDBABE92200408A9009FFAD4 /* ViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
