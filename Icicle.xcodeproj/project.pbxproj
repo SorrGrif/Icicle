@@ -85,16 +85,13 @@
 		EDBABE8E200408A9009FFAD4 /* Icicle */ = {
 			isa = PBXGroup;
 			children = (
+				EDC5C41D2006990400F907A8 /* ViewControllers */,
 				EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */,
-				EDBABE91200408A9009FFAD4 /* LoginViewController.swift */,
 				EDBABE93200408A9009FFAD4 /* Main.storyboard */,
 				EDBABE96200408A9009FFAD4 /* Assets.xcassets */,
 				EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */,
 				EDBABE9B200408A9009FFAD4 /* Info.plist */,
-				EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */,
 				EDC5C41720055AC600F907A8 /* User.swift */,
-				EDC5C4192005BF6300F907A8 /* MessengerViewController.swift */,
-				EDC5C41B2006983300F907A8 /* ScheduleMeetingViewController.swift */,
 			);
 			path = Icicle;
 			sourceTree = "<group>";
@@ -106,6 +103,17 @@
 				EDBABEA6200408A9009FFAD4 /* Info.plist */,
 			);
 			path = IcicleTests;
+			sourceTree = "<group>";
+		};
+		EDC5C41D2006990400F907A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDBABEAF20042E09009FFAD4 /* ProfileViewController.swift */,
+				EDC5C4192005BF6300F907A8 /* MessengerViewController.swift */,
+				EDC5C41B2006983300F907A8 /* ScheduleMeetingViewController.swift */,
+				EDBABE91200408A9009FFAD4 /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
