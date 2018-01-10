@@ -94,6 +94,24 @@
             </objects>
             <point key="canvasLocation" x="-166" y="137"/>
         </scene>
+        <!--Schedule Meeting View Controller-->
+        <scene sceneID="68Y-aY-BoX">
+            <objects>
+                <viewController id="Dzc-Pw-Gv0" customClass="ScheduleMeetingViewController" customModule="Icicle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ogg-qM-Dg7"/>
+                        <viewControllerLayoutGuide type="bottom" id="DD7-8N-uhv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XcS-e9-J3k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xd1-92-8lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="-643"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="8oN-Wa-a5w">
             <objects>
@@ -188,6 +206,9 @@
                                             <constraint firstAttribute="height" constant="100" id="Z4g-1v-iax"/>
                                         </constraints>
                                         <state key="normal" title="Meeting Shed"/>
+                                        <connections>
+                                            <segue destination="Dzc-Pw-Gv0" kind="show" identifier="ScheduleMeetingSegue" id="gDI-bD-WDt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-n7-K0h">
                                         <rect key="frame" x="121" y="122" width="100" height="100"/>
