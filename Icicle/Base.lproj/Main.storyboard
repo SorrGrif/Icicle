@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hSx-Ca-NBN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -87,6 +87,7 @@
                         <outlet property="FooterLabel" destination="HO1-uS-fbZ" id="JU0-US-xra"/>
                         <outlet property="PasswordTextField" destination="bs3-ei-Vn3" id="Trc-mT-AOh"/>
                         <outlet property="UserNameTextField" destination="ueC-Rg-in2" id="ZUG-Qj-jbl"/>
+                        <segue destination="hSx-Ca-NBN" kind="show" identifier="LoginSegue" id="6Pc-iq-bne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -167,6 +168,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LogOutButtonOnClick:" destination="hSx-Ca-NBN" eventType="touchUpInside" id="7dK-kt-5gC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="LogoutSegue" id="YDc-BS-vxl"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWR-0Q-xHE">
@@ -279,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmp-Ig-kZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167.19999999999999" y="790.25487256371821"/>
+            <point key="canvasLocation" x="745" y="136"/>
         </scene>
     </scenes>
 </document>

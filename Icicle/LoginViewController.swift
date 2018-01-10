@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
         //set the logged in user to the userdefaults
         defaults.set(user.username, forKey: "user")
         defaults.set(true, forKey: "loggedin")
+        performSegue(withIdentifier: "LoginSegue", sender: self)
     }
 
 }

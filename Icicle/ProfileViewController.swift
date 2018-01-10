@@ -47,6 +47,7 @@ class ProfileViewController: UIViewController {
         
         defaults.set("", forKey: "user")
         defaults.set(false, forKey: "loggedin")
+        performSegue(withIdentifier: "LogoutSegue", sender: self)
     }
     
 }
