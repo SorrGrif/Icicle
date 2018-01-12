@@ -17,9 +17,22 @@ class ScheduleMeetingViewController: UIViewController
     @IBOutlet weak var UntilTimeButton: UIButton!
     @IBOutlet weak var DatePickerNavBar: UINavigationBar!
     @IBOutlet weak var DatePicker: UIDatePicker!
+    @IBOutlet weak var DatePickerNavBarTitle: UINavigationItem!
     
     //MARK: Variables
     var currentButton: UIButton! = nil
+    var currentButtonType: ButtonType?
+    let calendar = Calendar.current
+    let formatter = DateFormatter()
+    let monthFormat = "MMM DD, YYYY"
+    let timeFormat = "h:mm a"
+    
+    //MARK: Enums
+    enum ButtonType
+    {
+        case date
+        case time
+    }
     
     override func viewDidLoad()
     {
@@ -29,15 +42,14 @@ class ScheduleMeetingViewController: UIViewController
         //date and time
         //we format the date to get the name of the month
         let date = Date()
-        let calendar = Calendar.current
-        let formatter = DateFormatter()
-        formatter.dateFormat = "LLL"
+        
+        formatter.dateFormat = monthFormat
         let month = formatter.string(from: date)
-        formatter.dateFormat = "h:mm a"
+        formatter.dateFormat = timeFormat
         let time = formatter.string(from: date)
         
         //create a date and time string for fomatting purposes
-        let dateString = "\(month) \(calendar.component(.day, from:date)), \(calendar.component(.year, from: date))";
+        let dateString = month
         let timeString = time
         
         //not sure what the .normal does but it makes it not throw an error so meh.
@@ -53,18 +65,24 @@ class ScheduleMeetingViewController: UIViewController
     @IBAction func PickDate(_ sender: UIButton)
     {
         DatePickerNavBar.isHidden = false
+        DatePickerNavBarTitle.title = "Pick Date"
         DatePicker.isHidden = false
+        DatePicker.datePickerMode = .date
         
         
         currentButton = sender
+        currentButtonType = .date
     }
     
     @IBAction func PickTime(_ sender: UIButton)
     {
         DatePickerNavBar.isHidden = false
+        DatePickerNavBarTitle.title = "Pick Time"
         DatePicker.isHidden = false
+        DatePicker.datePickerMode = .time
         
         currentButton = sender
+        currentButtonType = .time
     }
     
     @IBAction func Done(_ sender: Any)
@@ -72,10 +90,22 @@ class ScheduleMeetingViewController: UIViewController
         DatePickerNavBar.isHidden = true
         DatePicker.isHidden = true
         
-        //
+        if(currentButtonType == .date)
+        {
+            formatter.dateFormat = monthFormat
+            let month = formatter.string(from: DatePicker.date)
+            
+            currentButton.setTitle(month, for: .normal)
+        }
+        else if (currentButtonType == .time)
+        {
+            formatter.dateFormat = timeFormat
+            let time = formatter.string(from: DatePicker.date)
+            
+            currentButton.setTitle(time, for: .normal)
+        }
         
         
-        currentButton.setTitle("", for: .normal)
     }
     
     @IBAction func Cancel(_ sender: Any)

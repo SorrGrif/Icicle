@@ -221,6 +221,7 @@
                     <connections>
                         <outlet property="DatePicker" destination="Cx2-jp-KcX" id="E8y-Qd-Y0h"/>
                         <outlet property="DatePickerNavBar" destination="9Ik-nq-8fa" id="W4v-Zu-8vS"/>
+                        <outlet property="DatePickerNavBarTitle" destination="ker-MU-lGk" id="iGy-pa-aHf"/>
                         <outlet property="FromDateButton" destination="Imw-5q-ld8" id="47L-P7-eAc"/>
                         <outlet property="FromTimeButton" destination="SgV-bm-e9K" id="AOb-wZ-exa"/>
                         <outlet property="UntilDateButton" destination="cd0-xb-hCG" id="Zzy-s4-Kne"/>
