@@ -118,6 +118,19 @@ class ScheduleMeetingViewController: UIViewController
         }
         
         
+        //I will come back to this area of code and insert code to make a notification at the set from date
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        //HERE
+        
+        
     }
     
     @IBAction func Cancel(_ sender: Any)
