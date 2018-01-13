@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController
+{
     
     //MARK: Outlets
     @IBOutlet weak var ProfileNameLabel: UILabel!
