@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
 
     //MARK: Objects
     var user: User?
+    var imageWasHeld: Bool?
     
     override func viewDidLoad()
     {
@@ -35,6 +36,12 @@ class ProfileViewController: UIViewController {
         SalaryLabel.text = "$\(user!.salary)"
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        //if the view appears reset the image held
+        imageWasHeld = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,10 +51,21 @@ class ProfileViewController: UIViewController {
     {
         //reset the userdefaults
         let defaults = UserDefaults.standard
-        
         defaults.set("", forKey: "user")
         defaults.set(false, forKey: "loggedin")
+        
         performSegue(withIdentifier: "LogoutSegue", sender: self)
+    }
+    
+    @IBAction func ChangePicture(_ sender: Any)
+    {
+        //if the image was held open the change image scene
+        //this is to prevent the scene opening multiple times because the software is too fast
+        if(!imageWasHeld!)
+        {
+            imageWasHeld = true
+            performSegue(withIdentifier: "ChangeImageSegue", sender: self)
+        }
     }
     
 }
