@@ -369,7 +369,7 @@
         <!--Report Bug-->
         <scene sceneID="4hc-B3-Dip">
             <objects>
-                <viewController title="Report Bug" id="lYO-Nu-1S6" sceneMemberID="viewController">
+                <viewController title="Report Bug" id="lYO-Nu-1S6" customClass="ReportBugStepOneViewController" customModule="Icicle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FuC-Ln-QnC"/>
                         <viewControllerLayoutGuide type="bottom" id="hql-On-bFt"/>
@@ -390,9 +390,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-Vu-8rX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-Vu-8rX">
                                 <rect key="frame" x="16" y="181" width="343" height="197"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="197" id="arj-HV-f7z"/>
                                 </constraints>
@@ -408,6 +408,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7N5-Vu-8rX" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="NNV-yV-7mM"/>
                             <constraint firstItem="YeG-mS-m4U" firstAttribute="top" secondItem="GK5-FQ-lHS" secondAttribute="bottom" constant="8" id="Ogd-vb-8iK"/>
@@ -419,19 +420,27 @@
                             <constraint firstItem="hql-On-bFt" firstAttribute="top" secondItem="QKE-up-DKh" secondAttribute="bottom" constant="20" id="jex-Lo-LwW"/>
                             <constraint firstItem="QKE-up-DKh" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="wQj-AX-lVj"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2tV-7T-iX3" appends="YES" id="aiu-Pq-ciy"/>
+                        </connections>
                     </view>
                     <connections>
-                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" id="Co2-nl-y8L"/>
+                        <segue destination="CXy-Xh-mOh" kind="custom" identifier="StepTwoSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Co2-nl-y8L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSt-dm-EuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="2tV-7T-iX3">
+                    <connections>
+                        <action selector="nextStep" destination="lYO-Nu-1S6" id="50O-wj-wbG"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1079.2" y="919.79010494752629"/>
         </scene>
-        <!--View Controller-->
+        <!--Report Bug Step Two View Controller-->
         <scene sceneID="v1L-B9-oqY">
             <objects>
-                <viewController id="CXy-Xh-mOh" sceneMemberID="viewController">
+                <viewController id="CXy-Xh-mOh" customClass="ReportBugStepTwoViewController" customModule="Icicle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lYl-9r-NW0"/>
                         <viewControllerLayoutGuide type="bottom" id="plH-cs-21u"/>
@@ -439,21 +448,78 @@
                     <view key="view" contentMode="scaleToFill" id="TEY-Fq-3YP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9a-0E-mfQ">
+                                <rect key="frame" x="148.5" y="107" width="78.5" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe how to recreate the issue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65Z-PS-cR6">
+                                <rect key="frame" x="32" y="149" width="310" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UWg-1n-5qd">
+                                <rect key="frame" x="16" y="181" width="343" height="197"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="Xd2-ah-pk4"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe for Step 3 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcm-ec-9Um">
+                                <rect key="frame" x="77" y="613" width="222" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="UWg-1n-5qd" firstAttribute="leading" secondItem="TEY-Fq-3YP" secondAttribute="leadingMargin" id="1Xs-KK-JjX"/>
+                            <constraint firstItem="plH-cs-21u" firstAttribute="top" secondItem="rcm-ec-9Um" secondAttribute="bottom" constant="20" id="GdA-wm-LdD"/>
+                            <constraint firstItem="65Z-PS-cR6" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="J86-s6-Wtl"/>
+                            <constraint firstItem="rcm-ec-9Um" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="Jjl-Zm-wMa"/>
+                            <constraint firstItem="E9a-0E-mfQ" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="Re3-T2-NiZ"/>
+                            <constraint firstItem="65Z-PS-cR6" firstAttribute="top" secondItem="E9a-0E-mfQ" secondAttribute="bottom" constant="8" id="cRz-DU-9H0"/>
+                            <constraint firstItem="UWg-1n-5qd" firstAttribute="top" secondItem="65Z-PS-cR6" secondAttribute="bottom" constant="8" id="ez4-MX-CmI"/>
+                            <constraint firstItem="E9a-0E-mfQ" firstAttribute="top" secondItem="lYl-9r-NW0" secondAttribute="bottom" constant="87" id="ii6-gF-rLz"/>
+                            <constraint firstItem="UWg-1n-5qd" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="yFt-nK-Ukv"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ev9-WJ-hBJ" appends="YES" id="6Qk-0z-bhT"/>
+                            <outletCollection property="gestureRecognizers" destination="wj2-8e-XPc" appends="YES" id="7H6-L5-z7q"/>
+                        </connections>
                     </view>
                     <connections>
-                        <segue destination="Eqn-P2-k8k" kind="show" identifier="StepThreeSegue" id="Dc6-zv-J4X"/>
-                        <segue destination="lYO-Nu-1S6" kind="show" identifier="StepOneSegue" id="gXx-CA-s0J"/>
+                        <segue destination="Eqn-P2-k8k" kind="custom" identifier="StepThreeSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Dc6-zv-J4X"/>
+                        <segue destination="lYO-Nu-1S6" kind="custom" identifier="StepOneSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="gXx-CA-s0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bD5-hH-I6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ev9-WJ-hBJ">
+                    <connections>
+                        <action selector="prevStep" destination="CXy-Xh-mOh" id="oMF-wG-0uo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="wj2-8e-XPc">
+                    <connections>
+                        <action selector="nextStep" destination="CXy-Xh-mOh" id="xk7-0R-vRP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-167" y="920"/>
         </scene>
-        <!--View Controller-->
+        <!--Report Bug Step Three View Controller-->
         <scene sceneID="zIZ-17-pDL">
             <objects>
-                <viewController id="Eqn-P2-k8k" sceneMemberID="viewController">
+                <viewController id="Eqn-P2-k8k" customClass="ReportBugStepThreeViewController" customModule="Icicle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QQj-v0-4T4"/>
                         <viewControllerLayoutGuide type="bottom" id="VZm-X1-iiR"/>
@@ -461,15 +527,79 @@
                     <view key="view" contentMode="scaleToFill" id="Fbu-vo-YcH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8za-lg-TdD">
+                                <rect key="frame" x="148" y="107" width="79" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review and submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA8-A3-gLl">
+                                <rect key="frame" x="102" y="149" width="170" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ifc-VT-TR7">
+                                <rect key="frame" x="16" y="181" width="343" height="100"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yMw-ZA-KQU"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-G3-GeR">
+                                <rect key="frame" x="144" y="601" width="86" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-hk-W6L">
+                                <rect key="frame" x="16" y="289" width="343" height="100"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ORZ-T2-twZ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ifc-VT-TR7" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="0yi-VV-8pK"/>
+                            <constraint firstItem="kA8-A3-gLl" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="2qv-5n-wV4"/>
+                            <constraint firstItem="ItM-hk-W6L" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="404-Sb-yZa"/>
+                            <constraint firstItem="8za-lg-TdD" firstAttribute="top" secondItem="QQj-v0-4T4" secondAttribute="bottom" constant="87" id="8SF-TM-A75"/>
+                            <constraint firstItem="ItM-hk-W6L" firstAttribute="top" secondItem="Ifc-VT-TR7" secondAttribute="bottom" constant="8" id="HeF-Kp-8Ri"/>
+                            <constraint firstItem="VZm-X1-iiR" firstAttribute="top" secondItem="t0g-G3-GeR" secondAttribute="bottom" constant="20" id="Oz1-Lc-6Pb"/>
+                            <constraint firstItem="t0g-G3-GeR" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="WOn-r6-OqA"/>
+                            <constraint firstItem="Ifc-VT-TR7" firstAttribute="leading" secondItem="Fbu-vo-YcH" secondAttribute="leadingMargin" id="dAx-bq-kjl"/>
+                            <constraint firstItem="8za-lg-TdD" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="fl8-2r-ZBd"/>
+                            <constraint firstItem="kA8-A3-gLl" firstAttribute="top" secondItem="8za-lg-TdD" secondAttribute="bottom" constant="8" id="hzV-pm-whw"/>
+                            <constraint firstItem="Ifc-VT-TR7" firstAttribute="leading" secondItem="ItM-hk-W6L" secondAttribute="leading" id="kBa-k7-1hw"/>
+                            <constraint firstItem="Ifc-VT-TR7" firstAttribute="top" secondItem="kA8-A3-gLl" secondAttribute="bottom" constant="8" id="tmq-IR-ehc"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eLb-E2-Y36" appends="YES" id="o9a-gI-ogZ"/>
+                        </connections>
                     </view>
                     <connections>
-                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" id="Yt1-zW-V7t"/>
+                        <segue destination="CXy-Xh-mOh" kind="custom" identifier="StepTwoSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="Yt1-zW-V7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sd-a5-6Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="eLb-E2-Y36">
+                    <connections>
+                        <action selector="prevStep" destination="Eqn-P2-k8k" id="3bK-GH-D17"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="745" y="920"/>
+            <point key="canvasLocation" x="744.79999999999995" y="919.79010494752629"/>
         </scene>
         <!--Change Image-->
         <scene sceneID="fF9-hV-dkd">
@@ -577,7 +707,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Co2-nl-y8L"/>
+        <segue reference="Yt1-zW-V7t"/>
         <segue reference="gXx-CA-s0J"/>
     </inferredMetricsTieBreakers>
 </document>

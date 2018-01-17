@@ -10,6 +10,8 @@
 		EDB37D22200FA0D400F04891 /* ReportBugStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */; };
 		EDB37D24200FA0DC00F04891 /* ReportBugStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */; };
 		EDB37D26200FA0E400F04891 /* ReportBugStepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */; };
+		EDB37D29200FA92100F04891 /* SlideInFromLeftAnim.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D28200FA92100F04891 /* SlideInFromLeftAnim.swift */; };
+		EDB37D2B200FAA4300F04891 /* SlideInFromRightAnim.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D2A200FAA4300F04891 /* SlideInFromRightAnim.swift */; };
 		EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */; };
 		EDBABE95200408A9009FFAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE93200408A9009FFAD4 /* Main.storyboard */; };
 		EDBABE97200408A9009FFAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE96200408A9009FFAD4 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepOneViewController.swift; sourceTree = "<group>"; };
 		EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepTwoViewController.swift; sourceTree = "<group>"; };
 		EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepThreeViewController.swift; sourceTree = "<group>"; };
+		EDB37D28200FA92100F04891 /* SlideInFromLeftAnim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInFromLeftAnim.swift; sourceTree = "<group>"; };
+		EDB37D2A200FAA4300F04891 /* SlideInFromRightAnim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInFromRightAnim.swift; sourceTree = "<group>"; };
 		EDBABE8C200408A9009FFAD4 /* Icicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Icicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBABE91200408A9009FFAD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDB37D27200FA91500F04891 /* SegueAnims */ = {
+			isa = PBXGroup;
+			children = (
+				EDB37D28200FA92100F04891 /* SlideInFromLeftAnim.swift */,
+				EDB37D2A200FAA4300F04891 /* SlideInFromRightAnim.swift */,
+			);
+			name = SegueAnims;
+			sourceTree = "<group>";
+		};
 		EDBABE83200408A9009FFAD4 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,7 @@
 		EDBABE8E200408A9009FFAD4 /* Icicle */ = {
 			isa = PBXGroup;
 			children = (
+				EDB37D27200FA91500F04891 /* SegueAnims */,
 				EDC5C41D2006990400F907A8 /* ViewControllers */,
 				EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */,
 				EDBABE93200408A9009FFAD4 /* Main.storyboard */,
@@ -230,7 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB37D2B200FAA4300F04891 /* SlideInFromRightAnim.swift in Sources */,
 				EDC5C41820055AC600F907A8 /* User.swift in Sources */,
+				EDB37D29200FA92100F04891 /* SlideInFromLeftAnim.swift in Sources */,
 				EDC5C414200558EB00F907A8 /* LoginViewController.swift in Sources */,
 				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,

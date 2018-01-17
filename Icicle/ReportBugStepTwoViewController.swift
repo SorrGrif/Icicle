@@ -6,4 +6,26 @@
 //  Copyright © 2018 Griffin Sorrentino. All rights reserved.
 //
 
-import Foundation
+
+import UIKit
+
+class ReportBugStepTwoViewController: UIViewController
+{
+    
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func nextStep()
+    {
+        performSegue(withIdentifier: "StepThreeSegue", sender: self)
+    }
+    
+    @IBAction func prevStep()
+    {
+        performSegue(withIdentifier: "StepOneSegue", sender: self)
+    }
+    
+}

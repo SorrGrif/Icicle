@@ -17,7 +17,10 @@ class ReportBugStepOneViewController: UIViewController
         super.viewDidLoad()
     }
     
-    
+    @IBAction func nextStep()
+    {
+        performSegue(withIdentifier: "StepTwoSegue", sender: self)
+    }
     
     
 }
