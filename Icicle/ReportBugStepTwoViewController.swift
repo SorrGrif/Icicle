@@ -37,6 +37,11 @@ class ReportBugStepTwoViewController: UIViewController
         performSegue(withIdentifier: "StepOneSegue", sender: self)
     }
     
+    @IBAction func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
+
     
     
 }

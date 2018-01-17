@@ -81,6 +81,11 @@ class LoginViewController: UIViewController {
         shakeAnim.toValue = NSValue(cgPoint: CGPoint(x:fieldToShake.center.x + 10, y: fieldToShake.center.y))
         fieldToShake.layer.add(shakeAnim, forKey: "position")
     }
+    
+    @IBAction func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
 
 }
 
