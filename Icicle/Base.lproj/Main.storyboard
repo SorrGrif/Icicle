@@ -285,7 +285,7 @@
                                             <constraint firstAttribute="width" constant="100" id="Qsv-gi-6zx"/>
                                             <constraint firstAttribute="height" constant="100" id="YPN-6Z-OIO"/>
                                         </constraints>
-                                        <state key="normal" title="Meeting Shed"/>
+                                        <state key="normal" title="Meetings"/>
                                         <connections>
                                             <segue destination="Dzc-Pw-Gv0" kind="show" identifier="ScheduleMeetingSegue" id="gDI-bD-WDt"/>
                                         </connections>
