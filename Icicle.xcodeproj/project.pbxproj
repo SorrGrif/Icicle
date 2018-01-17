@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDB37D22200FA0D400F04891 /* ReportBugStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */; };
+		EDB37D24200FA0DC00F04891 /* ReportBugStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */; };
+		EDB37D26200FA0E400F04891 /* ReportBugStepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */; };
 		EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */; };
 		EDBABE95200408A9009FFAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE93200408A9009FFAD4 /* Main.storyboard */; };
 		EDBABE97200408A9009FFAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBABE96200408A9009FFAD4 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepOneViewController.swift; sourceTree = "<group>"; };
+		EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepTwoViewController.swift; sourceTree = "<group>"; };
+		EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepThreeViewController.swift; sourceTree = "<group>"; };
 		EDBABE8C200408A9009FFAD4 /* Icicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Icicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBABE8F200408A9009FFAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBABE91200408A9009FFAD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				EDC5C4192005BF6300F907A8 /* MessengerViewController.swift */,
 				EDC5C41B2006983300F907A8 /* ScheduleMeetingViewController.swift */,
 				EDBABE91200408A9009FFAD4 /* LoginViewController.swift */,
+				EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */,
+				EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */,
+				EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -226,6 +235,9 @@
 				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,
 				EDC5C41A2005BF6300F907A8 /* MessengerViewController.swift in Sources */,
+				EDB37D22200FA0D400F04891 /* ReportBugStepOneViewController.swift in Sources */,
+				EDB37D24200FA0DC00F04891 /* ReportBugStepTwoViewController.swift in Sources */,
+				EDB37D26200FA0E400F04891 /* ReportBugStepThreeViewController.swift in Sources */,
 				EDC5C41C2006983300F907A8 /* ScheduleMeetingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

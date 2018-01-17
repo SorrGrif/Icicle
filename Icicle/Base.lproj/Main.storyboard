@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C205" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C205" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lYO-Nu-1S6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -377,12 +377,99 @@
                     <view key="view" contentMode="scaleToFill" id="9PU-Cb-VCG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-FQ-lHS">
+                                <rect key="frame" x="150" y="107" width="75" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe the issue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeG-mS-m4U">
+                                <rect key="frame" x="104" y="149" width="166" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-Vu-8rX">
+                                <rect key="frame" x="16" y="181" width="343" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="arj-HV-f7z"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe for Step 2 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-up-DKh">
+                                <rect key="frame" x="77" y="613" width="222" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7N5-Vu-8rX" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="NNV-yV-7mM"/>
+                            <constraint firstItem="YeG-mS-m4U" firstAttribute="top" secondItem="GK5-FQ-lHS" secondAttribute="bottom" constant="8" id="Ogd-vb-8iK"/>
+                            <constraint firstItem="7N5-Vu-8rX" firstAttribute="top" secondItem="YeG-mS-m4U" secondAttribute="bottom" constant="8" id="Pfy-q3-GlW"/>
+                            <constraint firstItem="GK5-FQ-lHS" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="QAv-mz-Id8"/>
+                            <constraint firstItem="7N5-Vu-8rX" firstAttribute="leading" secondItem="9PU-Cb-VCG" secondAttribute="leadingMargin" id="azX-8r-vdZ"/>
+                            <constraint firstItem="GK5-FQ-lHS" firstAttribute="top" secondItem="FuC-Ln-QnC" secondAttribute="bottom" constant="87" id="dah-sN-PJM"/>
+                            <constraint firstItem="YeG-mS-m4U" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="eIR-QW-4FI"/>
+                            <constraint firstItem="hql-On-bFt" firstAttribute="top" secondItem="QKE-up-DKh" secondAttribute="bottom" constant="20" id="jex-Lo-LwW"/>
+                            <constraint firstItem="QKE-up-DKh" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="wQj-AX-lVj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" id="Co2-nl-y8L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSt-dm-EuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="915"/>
+            <point key="canvasLocation" x="-1079.2" y="919.79010494752629"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v1L-B9-oqY">
+            <objects>
+                <viewController id="CXy-Xh-mOh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lYl-9r-NW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="plH-cs-21u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TEY-Fq-3YP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Eqn-P2-k8k" kind="show" identifier="StepThreeSegue" id="Dc6-zv-J4X"/>
+                        <segue destination="lYO-Nu-1S6" kind="show" identifier="StepOneSegue" id="gXx-CA-s0J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD5-hH-I6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="920"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zIZ-17-pDL">
+            <objects>
+                <viewController id="Eqn-P2-k8k" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQj-v0-4T4"/>
+                        <viewControllerLayoutGuide type="bottom" id="VZm-X1-iiR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fbu-vo-YcH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" id="Yt1-zW-V7t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sd-a5-6Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="920"/>
         </scene>
         <!--Change Image-->
         <scene sceneID="fF9-hV-dkd">
@@ -489,4 +576,8 @@
             <point key="canvasLocation" x="-167" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Co2-nl-y8L"/>
+        <segue reference="gXx-CA-s0J"/>
+    </inferredMetricsTieBreakers>
 </document>
