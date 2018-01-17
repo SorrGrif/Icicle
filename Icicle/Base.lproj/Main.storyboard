@@ -299,7 +299,7 @@
                                         </constraints>
                                         <state key="normal" title="Report Bug"/>
                                         <connections>
-                                            <segue destination="lYO-Nu-1S6" kind="custom" identifier="ReportBugSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="DNs-N9-flr"/>
+                                            <segue destination="lYO-Nu-1S6" kind="presentation" identifier="ReportBugSegue" id="DNs-N9-flr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Ob-ymd">
