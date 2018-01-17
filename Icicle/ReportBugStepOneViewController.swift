@@ -29,5 +29,10 @@ class ReportBugStepOneViewController: UIViewController
         performSegue(withIdentifier: "StepTwoSegue", sender: self)
     }
     
+    @IBAction func backToProfile()
+    {
+        performSegue(withIdentifier: "ProfileSegue", sender: self)
+    }
+    
     
 }

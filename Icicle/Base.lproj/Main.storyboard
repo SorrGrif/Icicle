@@ -300,7 +300,7 @@
                                         </constraints>
                                         <state key="normal" title="Report Bug"/>
                                         <connections>
-                                            <segue destination="lYO-Nu-1S6" kind="show" identifier="ReportBugSegue" id="DNs-N9-flr"/>
+                                            <segue destination="lYO-Nu-1S6" kind="custom" identifier="ReportBugSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="DNs-N9-flr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Ob-ymd">
@@ -405,19 +405,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-5G-hAa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Report Bug" id="0ov-2J-2cF">
+                                        <barButtonItem key="leftBarButtonItem" title="Profile" id="ThW-hw-Ojh">
+                                            <connections>
+                                                <action selector="backToProfile" destination="lYO-Nu-1S6" id="TMS-0t-7eo"/>
+                                                <segue destination="c7r-sX-RqK" kind="presentation" identifier="ProfileSegue" id="tsC-7z-jkY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Step 2" id="jvj-we-n0f">
+                                            <connections>
+                                                <action selector="nextStep" destination="lYO-Nu-1S6" id="hmI-pT-ezr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5PM-fU-gjJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="GK5-FQ-lHS" firstAttribute="top" secondItem="Ssv-5G-hAa" secondAttribute="bottom" constant="43" id="7dT-It-MAo"/>
                             <constraint firstItem="7N5-Vu-8rX" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="NNV-yV-7mM"/>
                             <constraint firstItem="YeG-mS-m4U" firstAttribute="top" secondItem="GK5-FQ-lHS" secondAttribute="bottom" constant="8" id="Ogd-vb-8iK"/>
                             <constraint firstItem="7N5-Vu-8rX" firstAttribute="top" secondItem="YeG-mS-m4U" secondAttribute="bottom" constant="8" id="Pfy-q3-GlW"/>
                             <constraint firstItem="GK5-FQ-lHS" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="QAv-mz-Id8"/>
+                            <constraint firstItem="Ssv-5G-hAa" firstAttribute="trailing" secondItem="5PM-fU-gjJ" secondAttribute="trailing" id="S2I-zW-bbx"/>
+                            <constraint firstItem="Ssv-5G-hAa" firstAttribute="top" secondItem="FuC-Ln-QnC" secondAttribute="bottom" id="ZXw-nV-Wou"/>
                             <constraint firstItem="7N5-Vu-8rX" firstAttribute="leading" secondItem="9PU-Cb-VCG" secondAttribute="leadingMargin" id="azX-8r-vdZ"/>
-                            <constraint firstItem="GK5-FQ-lHS" firstAttribute="top" secondItem="FuC-Ln-QnC" secondAttribute="bottom" constant="87" id="dah-sN-PJM"/>
                             <constraint firstItem="YeG-mS-m4U" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="eIR-QW-4FI"/>
+                            <constraint firstItem="Ssv-5G-hAa" firstAttribute="leading" secondItem="5PM-fU-gjJ" secondAttribute="leading" id="ent-2F-knr"/>
                             <constraint firstItem="hql-On-bFt" firstAttribute="top" secondItem="QKE-up-DKh" secondAttribute="bottom" constant="20" id="jex-Lo-LwW"/>
+                            <constraint firstItem="Ssv-5G-hAa" firstAttribute="leading" secondItem="9PU-Cb-VCG" secondAttribute="leading" id="lil-tr-ZMH"/>
+                            <constraint firstItem="GK5-FQ-lHS" firstAttribute="top" secondItem="5PM-fU-gjJ" secondAttribute="bottom" constant="77" id="oyw-Ye-yHz"/>
                             <constraint firstItem="QKE-up-DKh" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="wQj-AX-lVj"/>
+                            <constraint firstItem="5PM-fU-gjJ" firstAttribute="top" secondItem="9PU-Cb-VCG" secondAttribute="top" id="xDn-ul-uYh"/>
+                            <constraint firstItem="Ssv-5G-hAa" firstAttribute="centerX" secondItem="9PU-Cb-VCG" secondAttribute="centerX" id="xaQ-Yz-NRw"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="2tV-7T-iX3" appends="YES" id="aiu-Pq-ciy"/>
@@ -425,7 +454,7 @@
                     </view>
                     <connections>
                         <outlet property="IssueDescriptionTextField" destination="7N5-Vu-8rX" id="1As-jD-tFL"/>
-                        <segue destination="CXy-Xh-mOh" kind="custom" identifier="StepTwoSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Co2-nl-y8L"/>
+                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Co2-nl-y8L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSt-dm-EuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,7 +479,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9a-0E-mfQ">
-                                <rect key="frame" x="148.5" y="107" width="78.5" height="34"/>
+                                <rect key="frame" x="148" y="107" width="79" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -477,29 +506,58 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN1-Oo-0rT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Report Bug" id="lwL-aT-Cdy">
+                                        <barButtonItem key="leftBarButtonItem" title="Step 1" id="uAO-mc-fIU">
+                                            <connections>
+                                                <action selector="prevStep" destination="CXy-Xh-mOh" id="Ju5-kz-Nfw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Step 3" id="9MQ-bN-Mj2">
+                                            <connections>
+                                                <action selector="nextStep" destination="CXy-Xh-mOh" id="BQX-dY-hV0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-cg-N84">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UWg-1n-5qd" firstAttribute="leading" secondItem="TEY-Fq-3YP" secondAttribute="leadingMargin" id="1Xs-KK-JjX"/>
+                            <constraint firstItem="AN1-Oo-0rT" firstAttribute="top" secondItem="lYl-9r-NW0" secondAttribute="bottom" id="Dk3-Gj-wAa"/>
                             <constraint firstItem="plH-cs-21u" firstAttribute="top" secondItem="rcm-ec-9Um" secondAttribute="bottom" constant="20" id="GdA-wm-LdD"/>
+                            <constraint firstItem="AN1-Oo-0rT" firstAttribute="leading" secondItem="eR0-cg-N84" secondAttribute="leading" id="IUG-TE-TC6"/>
                             <constraint firstItem="65Z-PS-cR6" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="J86-s6-Wtl"/>
+                            <constraint firstItem="AN1-Oo-0rT" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="JJU-RS-sfU"/>
                             <constraint firstItem="rcm-ec-9Um" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="Jjl-Zm-wMa"/>
                             <constraint firstItem="E9a-0E-mfQ" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="Re3-T2-NiZ"/>
+                            <constraint firstItem="E9a-0E-mfQ" firstAttribute="top" secondItem="AN1-Oo-0rT" secondAttribute="bottom" constant="43" id="X5d-70-3XE"/>
                             <constraint firstItem="65Z-PS-cR6" firstAttribute="top" secondItem="E9a-0E-mfQ" secondAttribute="bottom" constant="8" id="cRz-DU-9H0"/>
                             <constraint firstItem="UWg-1n-5qd" firstAttribute="top" secondItem="65Z-PS-cR6" secondAttribute="bottom" constant="8" id="ez4-MX-CmI"/>
-                            <constraint firstItem="E9a-0E-mfQ" firstAttribute="top" secondItem="lYl-9r-NW0" secondAttribute="bottom" constant="87" id="ii6-gF-rLz"/>
+                            <constraint firstItem="eR0-cg-N84" firstAttribute="top" secondItem="TEY-Fq-3YP" secondAttribute="top" id="geg-Ac-doF"/>
+                            <constraint firstItem="AN1-Oo-0rT" firstAttribute="trailing" secondItem="eR0-cg-N84" secondAttribute="trailing" id="hDk-t4-hdV"/>
+                            <constraint firstItem="AN1-Oo-0rT" firstAttribute="leading" secondItem="TEY-Fq-3YP" secondAttribute="leading" id="xJ3-ag-1Nw"/>
                             <constraint firstItem="UWg-1n-5qd" firstAttribute="centerX" secondItem="TEY-Fq-3YP" secondAttribute="centerX" id="yFt-nK-Ukv"/>
+                            <constraint firstItem="E9a-0E-mfQ" firstAttribute="top" secondItem="eR0-cg-N84" secondAttribute="bottom" constant="77" id="zvs-JW-CMj"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ev9-WJ-hBJ" appends="YES" id="6Qk-0z-bhT"/>
                             <outletCollection property="gestureRecognizers" destination="wj2-8e-XPc" appends="YES" id="7H6-L5-z7q"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="m5x-W4-oey"/>
                     <connections>
                         <outlet property="RecreateIssueTextField" destination="UWg-1n-5qd" id="J0U-mO-4kf"/>
-                        <segue destination="Eqn-P2-k8k" kind="custom" identifier="StepThreeSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Dc6-zv-J4X"/>
-                        <segue destination="lYO-Nu-1S6" kind="custom" identifier="StepOneSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="gXx-CA-s0J"/>
+                        <segue destination="Eqn-P2-k8k" kind="show" identifier="StepThreeSegue" customClass="SlideInFromRightAnim" customModule="Icicle" customModuleProvider="target" id="Dc6-zv-J4X"/>
+                        <segue destination="lYO-Nu-1S6" kind="show" identifier="StepOneSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="gXx-CA-s0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bD5-hH-I6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -550,14 +608,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-G3-GeR">
-                                <rect key="frame" x="144" y="601" width="86" height="46"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="Submit:" destination="Eqn-P2-k8k" eventType="touchUpInside" id="bXm-wu-lpI"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-hk-W6L">
                                 <rect key="frame" x="16" y="289" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -568,6 +618,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-G3-GeR">
+                                <rect key="frame" x="144" y="601" width="86" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="Submit:" destination="Eqn-P2-k8k" eventType="touchUpInside" id="bXm-wu-lpI"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzx-bm-nsh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Report Bug" id="Hnp-xn-W3J">
+                                        <barButtonItem key="leftBarButtonItem" title="Step 2" id="VMN-cT-cJg">
+                                            <connections>
+                                                <action selector="prevStep" destination="Eqn-P2-k8k" id="SQC-kv-tTy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9SF-eG-Bfg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -575,14 +649,21 @@
                             <constraint firstItem="Ifc-VT-TR7" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="0yi-VV-8pK"/>
                             <constraint firstItem="kA8-A3-gLl" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="2qv-5n-wV4"/>
                             <constraint firstItem="ItM-hk-W6L" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="404-Sb-yZa"/>
-                            <constraint firstItem="8za-lg-TdD" firstAttribute="top" secondItem="QQj-v0-4T4" secondAttribute="bottom" constant="87" id="8SF-TM-A75"/>
+                            <constraint firstItem="Rzx-bm-nsh" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="8Zh-Y4-AAz"/>
                             <constraint firstItem="ItM-hk-W6L" firstAttribute="top" secondItem="Ifc-VT-TR7" secondAttribute="bottom" constant="8" id="HeF-Kp-8Ri"/>
-                            <constraint firstItem="VZm-X1-iiR" firstAttribute="top" secondItem="t0g-G3-GeR" secondAttribute="bottom" constant="20" id="Oz1-Lc-6Pb"/>
+                            <constraint firstItem="Rzx-bm-nsh" firstAttribute="leading" secondItem="Fbu-vo-YcH" secondAttribute="leading" id="UvD-Zs-DO7"/>
+                            <constraint firstItem="8za-lg-TdD" firstAttribute="top" secondItem="9SF-eG-Bfg" secondAttribute="bottom" constant="77" id="W6L-Ea-SJJ"/>
                             <constraint firstItem="t0g-G3-GeR" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="WOn-r6-OqA"/>
                             <constraint firstItem="Ifc-VT-TR7" firstAttribute="leading" secondItem="Fbu-vo-YcH" secondAttribute="leadingMargin" id="dAx-bq-kjl"/>
+                            <constraint firstItem="9SF-eG-Bfg" firstAttribute="top" secondItem="Fbu-vo-YcH" secondAttribute="top" id="eOG-DZ-hUs"/>
                             <constraint firstItem="8za-lg-TdD" firstAttribute="centerX" secondItem="Fbu-vo-YcH" secondAttribute="centerX" id="fl8-2r-ZBd"/>
                             <constraint firstItem="kA8-A3-gLl" firstAttribute="top" secondItem="8za-lg-TdD" secondAttribute="bottom" constant="8" id="hzV-pm-whw"/>
                             <constraint firstItem="Ifc-VT-TR7" firstAttribute="leading" secondItem="ItM-hk-W6L" secondAttribute="leading" id="kBa-k7-1hw"/>
+                            <constraint firstItem="Rzx-bm-nsh" firstAttribute="leading" secondItem="9SF-eG-Bfg" secondAttribute="leading" id="opa-wn-7PX"/>
+                            <constraint firstItem="Rzx-bm-nsh" firstAttribute="top" secondItem="QQj-v0-4T4" secondAttribute="bottom" id="qRQ-kc-n9c"/>
+                            <constraint firstItem="VZm-X1-iiR" firstAttribute="top" secondItem="t0g-G3-GeR" secondAttribute="bottom" constant="20" id="rx9-TN-thy"/>
+                            <constraint firstItem="Rzx-bm-nsh" firstAttribute="trailing" secondItem="9SF-eG-Bfg" secondAttribute="trailing" id="sjA-ci-Gop"/>
+                            <constraint firstItem="8za-lg-TdD" firstAttribute="top" secondItem="Rzx-bm-nsh" secondAttribute="bottom" constant="43" id="t4o-QL-Meg"/>
                             <constraint firstItem="Ifc-VT-TR7" firstAttribute="top" secondItem="kA8-A3-gLl" secondAttribute="bottom" constant="8" id="tmq-IR-ehc"/>
                         </constraints>
                         <connections>
@@ -593,7 +674,7 @@
                         <outlet property="IssueDescriptionTextField" destination="Ifc-VT-TR7" id="lKh-CF-Ypf"/>
                         <outlet property="RecreateIssueTextField" destination="ItM-hk-W6L" id="csc-xR-Jsy"/>
                         <outlet property="SubmitButton" destination="t0g-G3-GeR" id="J6g-DT-Ktn"/>
-                        <segue destination="CXy-Xh-mOh" kind="custom" identifier="StepTwoSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="Yt1-zW-V7t"/>
+                        <segue destination="CXy-Xh-mOh" kind="show" identifier="StepTwoSegue" customClass="SlideInFromLeftAnim" customModule="Icicle" customModuleProvider="target" id="Yt1-zW-V7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sd-a5-6Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -711,7 +792,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yt1-zW-V7t"/>
-        <segue reference="gXx-CA-s0J"/>
+        <segue reference="Co2-nl-y8L"/>
+        <segue reference="DNs-N9-flr"/>
+        <segue reference="tsC-7z-jkY"/>
     </inferredMetricsTieBreakers>
 </document>

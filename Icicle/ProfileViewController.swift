@@ -35,6 +35,9 @@ class ProfileViewController: UIViewController
         CompanyLabel.text = user!.company
         PositionLabel.text = user!.position
         SalaryLabel.text = "$\(user!.salary)"
+        
+        defaults.set("I was doing...", forKey: "issuedescription")
+        defaults.set("If you...", forKey: "recreateissue")
     }
     
     override func viewWillAppear(_ animated: Bool)
