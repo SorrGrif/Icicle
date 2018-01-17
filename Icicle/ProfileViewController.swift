@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController
+{
     
     //MARK: Outlets
     @IBOutlet weak var ProfileNameLabel: UILabel!
@@ -18,6 +19,7 @@ class ProfileViewController: UIViewController {
 
     //MARK: Objects
     var user: User?
+    var imageWasHeld: Bool?
     
     override func viewDidLoad()
     {
@@ -33,6 +35,15 @@ class ProfileViewController: UIViewController {
         CompanyLabel.text = user!.company
         PositionLabel.text = user!.position
         SalaryLabel.text = "$\(user!.salary)"
+        
+        defaults.set("I was doing...", forKey: "issuedescription")
+        defaults.set("If you...", forKey: "recreateissue")
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        //if the view appears reset the image held
+        imageWasHeld = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,10 +55,21 @@ class ProfileViewController: UIViewController {
     {
         //reset the userdefaults
         let defaults = UserDefaults.standard
-        
         defaults.set("", forKey: "user")
         defaults.set(false, forKey: "loggedin")
+        
         performSegue(withIdentifier: "LogoutSegue", sender: self)
+    }
+    
+    @IBAction func ChangePicture(_ sender: Any)
+    {
+        //if the image was held open the change image scene
+        //this is to prevent the scene opening multiple times because the software is too fast
+        if(!imageWasHeld!)
+        {
+            imageWasHeld = true
+            performSegue(withIdentifier: "ChangeImageSegue", sender: self)
+        }
     }
     
 }
