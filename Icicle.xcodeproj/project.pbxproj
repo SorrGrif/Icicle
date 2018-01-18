@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1F84F920102D68006A4013 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F84F820102D68006A4013 /* ServerAPI.swift */; };
 		EDB37D22200FA0D400F04891 /* ReportBugStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */; };
 		EDB37D24200FA0DC00F04891 /* ReportBugStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */; };
 		EDB37D26200FA0E400F04891 /* ReportBugStepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B1F84F820102D68006A4013 /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		EDB37D21200FA0D400F04891 /* ReportBugStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepOneViewController.swift; sourceTree = "<group>"; };
 		EDB37D23200FA0DC00F04891 /* ReportBugStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepTwoViewController.swift; sourceTree = "<group>"; };
 		EDB37D25200FA0E400F04891 /* ReportBugStepThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportBugStepThreeViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				EDBABE98200408A9009FFAD4 /* LaunchScreen.storyboard */,
 				EDBABE9B200408A9009FFAD4 /* Info.plist */,
 				EDC5C41720055AC600F907A8 /* User.swift */,
+				6B1F84F820102D68006A4013 /* ServerAPI.swift */,
 			);
 			path = Icicle;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				EDBABEB020042E09009FFAD4 /* ProfileViewController.swift in Sources */,
 				EDBABE90200408A9009FFAD4 /* AppDelegate.swift in Sources */,
 				EDC5C41A2005BF6300F907A8 /* MessengerViewController.swift in Sources */,
+				6B1F84F920102D68006A4013 /* ServerAPI.swift in Sources */,
 				EDB37D22200FA0D400F04891 /* ReportBugStepOneViewController.swift in Sources */,
 				EDB37D24200FA0DC00F04891 /* ReportBugStepTwoViewController.swift in Sources */,
 				EDB37D26200FA0E400F04891 /* ReportBugStepThreeViewController.swift in Sources */,
@@ -397,6 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M682538UEM;
 				INFOPLIST_FILE = Icicle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.stclairconnect.griffin.sorrentino.63.Icicle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M682538UEM;
 				INFOPLIST_FILE = Icicle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.stclairconnect.griffin.sorrentino.63.Icicle;
 				PRODUCT_NAME = "$(TARGET_NAME)";

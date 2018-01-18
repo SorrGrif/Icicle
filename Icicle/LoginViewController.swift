@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,36 +29,55 @@ class LoginViewController: UIViewController {
     @IBAction func LoginButtonOnClick(_ sender: Any)
     {
         
-        
         //when the login button is clicked, attempt to login with the given username and password
         let username = UserNameTextField.text!
         let password = PasswordTextField.text!
         
-        let user = User(currentUser: username)
-        
-        //if the username is incorrect display that as a message and shake the username field
-        if(user.username != username)
-        {
-            FooterLabel.text = "Incorrect Username!"
-            FooterLabel.textColor = .red
-            incorrectInfo(fieldToShake: UserNameTextField)
-        }
-        else
-        {
-            //if the password is incorrect display that as a message and shake the password field
-            if(user.password != password)
-            {
-                FooterLabel.text = "Incorrect Password!"
-                FooterLabel.textColor = .red
-                incorrectInfo(fieldToShake: PasswordTextField)
+        let url = URL(string: "http://icicle-messenger.portalcode.net/authenticate")!
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let postString = "email=\(username)&password=\(password)"
+        request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(error)")
+                return
             }
-            else
-            {
-                FooterLabel.text = "Don't share your login credentials"
-                login(user: user)
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(responseString)")
+            do {
+                let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+                print("\(json["auth_token"] as? String)")
+                if let token = json["auth_token"] as? String {
+                    User.jwt = token
+                    print(token)
+                    let user = User(currentUser: username)
+                    DispatchQueue.main.async {
+                        self.FooterLabel.text = "Don't share your login credentials"
+                        self.login(user: user)
+                    }
+                } else {
+                    print("LOGIN FAILURE")
+                    DispatchQueue.main.async {
+                        self.incorrectInfo(fieldToShake: self.UserNameTextField)
+                        self.FooterLabel.text = "Incorrect Username or Password!"
+                        self.FooterLabel.textColor = .red
+                        self.incorrectInfo(fieldToShake: self.PasswordTextField)
+                    }
+                }
+                
+            } catch {
+                print("JSON DECODE ERROR")
             }
         }
-        
+        task.resume()
     }
     
     func login(user: User)

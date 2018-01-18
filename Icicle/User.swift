@@ -11,6 +11,8 @@ import CoreData
 
 class User
 {
+    static var jwt = ""
+    
     //MARK: User Details
     var username = "N/A"
     var password = "N/A"

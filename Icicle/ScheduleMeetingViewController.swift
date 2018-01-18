@@ -183,7 +183,6 @@ class ScheduleMeetingViewController: UIViewController, UNUserNotificationCenterD
         content.body = "You have a meeting in 5 minutes"
         content.sound = UNNotificationSound.default()
         
-        
         let calendarComponents:Set<Calendar.Component> = [.hour, .minute, .second, .month, .day, .year]
         
         var date = Calendar.current.dateComponents(calendarComponents, from: Date())
