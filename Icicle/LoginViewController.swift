@@ -83,7 +83,7 @@ class LoginViewController: UIViewController {
     func login(user: User, viewController: UIViewController)
     {
         //get the userdefaults so we can add key value pairs
-        let defaults = UserDefaults.standard;
+        _ = UserDefaults.standard;
         
         let url = URL(string: "http://icicle-messenger.portalcode.net/currentuser")!
         var request = URLRequest(url: url)

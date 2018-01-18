@@ -21,7 +21,7 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let message = messageInput.text!
         
-        var url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
+        let url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue(User.jwt, forHTTPHeaderField: "Authorization")
@@ -100,7 +100,7 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
             self.refreshChat()
         }
         
-        var url = URL(string: "http://icicle-messenger.portalcode.net/users")!
+        let url = URL(string: "http://icicle-messenger.portalcode.net/users")!
         var request = URLRequest(url: url)
         //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue(User.jwt, forHTTPHeaderField: "Authorization")
@@ -130,7 +130,7 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.usersArray.append(json[i]["username"]! as! String)
                 }
                 
-                var url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
+                let url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
                 var request = URLRequest(url: url)
                 //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
                 request.setValue(User.jwt, forHTTPHeaderField: "Authorization")
@@ -166,9 +166,9 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                             }
                             //var userID = json[i]["created_by"] as! Int
                             
-                            var body = json[i]["body"] as! String
+                            let body = json[i]["body"] as! String
                             
-                            var message = Message(userid: userID, message: body)
+                            let message = Message(userid: userID, message: body)
                             //message.init()
                             self.messagesArray.append(message)
                             //                    self.messagesArray.append([json[i]["body"]! as! String,json[i]["created_by"] as! Int])
@@ -218,7 +218,7 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
     func refreshChat() {
         
         
-        var url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
+        let url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
         var request = URLRequest(url: url)
         //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue(User.jwt, forHTTPHeaderField: "Authorization")
@@ -256,9 +256,9 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     //var userID = json[i]["created_by"] as! Int
                     
-                    var body = json[i]["body"] as! String
+                    let body = json[i]["body"] as! String
                     
-                    var message = Message(userid: userID, message: body)
+                    let message = Message(userid: userID, message: body)
                     //message.init()
                     self.messagesArray.append(message)
                     //                    self.messagesArray.append([json[i]["body"]! as! String,json[i]["created_by"] as! Int])
@@ -327,7 +327,7 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        var messageUserID = self.messagesArray[indexPath.row].userid
+        let messageUserID = self.messagesArray[indexPath.row].userid
         print(messageUserID)
         print(self.usersArray.count)
 //        print("FUCK")
