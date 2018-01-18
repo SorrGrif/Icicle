@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
                     let user = User(currentUser: username)
                     DispatchQueue.main.async {
                         self.FooterLabel.text = "Don't share your login credentials"
-                        self.login(user: user)
+                        self.login(user: user, viewController: self)
                     }
                 } else {
                     print("LOGIN FAILURE")
@@ -80,15 +80,88 @@ class LoginViewController: UIViewController {
         task.resume()
     }
     
-    func login(user: User)
+    func login(user: User, viewController: UIViewController)
     {
         //get the userdefaults so we can add key value pairs
         let defaults = UserDefaults.standard;
         
-        //set the logged in user to the userdefaults
-        defaults.set(user.username, forKey: "user")
-        defaults.set(true, forKey: "loggedin")
-        performSegue(withIdentifier: "LoginSegue", sender: self)
+        let url = URL(string: "http://icicle-messenger.portalcode.net/currentuser")!
+        var request = URLRequest(url: url)
+        //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue(User.jwt, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        //let postString = "email=\(username)&password=\(password)"
+        //request.httpBody = postString.data(using: .utf8)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(responseString)")
+            do {
+                let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+                print("\(json["username"] as? String)")
+                if let username = json["username"] as? String {
+                    let user = User(currentUser: username)
+                    if let company = json["company"] as? String {
+                        user.company = company
+                    } else {
+                        user.company = "N/A:"
+                    }
+                    
+                    if let position = json["position"] as? String {
+                        user.position = position
+                    } else {
+                        user.position = "N/A:"
+                    }
+                    
+                    if let salary = json["salary"] as? String {
+                        user.salary = salary
+                    } else {
+                        user.salary = "N/A:"
+                    }
+                    
+                    user.username = username
+                    
+                    ProfileViewController.user = user	
+//                    DispatchQueue.main.async {
+//                        self.FooterLabel.text = "Don't share your login credentials"
+//                        self.login(user: user)
+//                        
+//                        //set the logged in user to the userdefaults
+//                        defaults.set(user.username, forKey: "user")
+//                        defaults.set(true, forKey: "loggedin")
+//             	       }
+                    DispatchQueue.main.async {
+                        viewController.performSegue(withIdentifier: "LoginSegue", sender: self)
+                    }
+                    
+                } else {
+                    print("LOGIN FAILURE")
+                    DispatchQueue.main.async {
+                        self.incorrectInfo(fieldToShake: self.UserNameTextField)
+                        self.FooterLabel.text = "Incorrect Username or Password!"
+                        self.FooterLabel.textColor = .red
+                        self.incorrectInfo(fieldToShake: self.PasswordTextField)
+                    }
+                }
+                
+            } catch {
+                print("JSON DECODE ERROR")
+            }
+        }
+        task.resume()
+        
+        
+        
+        //performSegue(withIdentifier: "LoginSegue", sender: self)
     }
     
     func incorrectInfo(fieldToShake: UITextField)

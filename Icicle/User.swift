@@ -29,10 +29,10 @@ class User
         //this will retrieve the list of users from the server
         
         //currently hardcoded
-        getUserList()
+        //getUserList()
         
         //this will get the user data of the current user
-        getUserData(currentUser: currentUser)
+        //getUserData(currentUser: currentUser)
     }
     
     func getUserList()

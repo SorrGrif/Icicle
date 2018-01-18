@@ -128,19 +128,8 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                 for i in 0 ..< json.count {
                     print(json[i]["username"]!)
                     self.usersArray.append(json[i]["username"]! as! String)
-                    
-                    
                 }
                 
-                //                DispatchQueue.main.async {
-                //                    self.messagesTableView.beginUpdates()
-                //
-                //                    //self.messagesTableView.dataSource = self
-                //                    for i in 0 ..< self.messagesArray.count {
-                //                        self.messagesTableView.insertRows(at: [NSIndexPath(item: i, section: 0) as IndexPath], with: .automatic)
-                //                    }
-                //                    self.messagesTableView.endUpdates()
-                //                }
                 var url = URL(string: "http://icicle-messenger.portalcode.net/messages")!
                 var request = URLRequest(url: url)
                 //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

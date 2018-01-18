@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController
     @IBOutlet weak var SalaryLabel: UILabel!
 
     //MARK: Objects
-    var user: User?
+    static var user: User?
     var imageWasHeld: Bool?
     
     override func viewDidLoad()
@@ -28,13 +28,13 @@ class ProfileViewController: UIViewController
         let defaults = UserDefaults.standard
         
         //Init the user object with the current user and gather the current users information
-        user = User(currentUser: defaults.value(forKey: "user") as! String)
+        //ProfileViewController.user = User(currentUser: defaults.value(forKey: "user") as! String)
         
         //populate the labels with the users information
-        ProfileNameLabel.text = user!.name
-        CompanyLabel.text = user!.company
-        PositionLabel.text = user!.position
-        SalaryLabel.text = "$\(user!.salary)"
+        ProfileNameLabel.text = ProfileViewController.user!.username
+        CompanyLabel.text = ProfileViewController.user!.company
+        PositionLabel.text = ProfileViewController.user!.position
+        SalaryLabel.text = "$\(ProfileViewController.user!.salary)"
         
         defaults.set("I was doing...", forKey: "issuedescription")
         defaults.set("If you...", forKey: "recreateissue")
