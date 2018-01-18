@@ -30,17 +30,17 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
         request.httpBody = postString.data(using: .utf8)
         let task2 = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                print("response = \(String(describing: response))")
             }
             
             let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+            print("responseString = \(String(describing: responseString))")
             //DispatchQueue.main.async {
             //    //self.refreshChat()
             //}
@@ -109,24 +109,24 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
         //request.httpBody = postString.data(using: .utf8)
         let task2 = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                print("response = \(String(describing: response))")
             }
             
             let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+            print("responseString = \(String(describing: responseString))")
             do {
                 let json = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
                 
                 self.usersArray = []
                 
                 for i in 0 ..< json.count {
-                    print(json[i]["username"]!)
+                    //print(json[i]["username"]!)
                     self.usersArray.append(json[i]["username"]! as! String)
                 }
                 
@@ -139,24 +139,24 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                 //request.httpBody = postString.data(using: .utf8)
                 let task = URLSession.shared.dataTask(with: request) { data, response, error in
                     guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                        print("error=\(error)")
+                        print("error=\(String(describing: error))")
                         return
                     }
                     
                     if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                         print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                        print("response = \(response)")
+                        print("response = \(String(describing: response))")
                     }
                     
                     let responseString = String(data: data, encoding: .utf8)
-                    print("responseString = \(responseString)")
+                    print("responseString = \(String(describing: responseString))")
                     do {
                         let json = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
                         self.messagesArray = []
                         
                         for i in 0 ..< json.count {
-                            print(json[i]["body"]!)
-                            print(json[i]["created_by"]!)
+                            //print(json[i]["body"]!)
+                            //print(json[i]["created_by"]!)
                             
                             var userID: Int
                             if let num = (json[i]["created_by"] as? NSString)?.integerValue {
@@ -227,17 +227,17 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
         //request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
+                print("error=\(String(describing: error))")
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                print("response = \(String(describing: response))")
             }
             
             let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
+            print("responseString = \(String(describing: responseString))")
             do {
                 let json = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
 //                self.messagesArray = []
@@ -245,8 +245,8 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.messagesTableView.reloadData()
                 
                 for i in 0 ..< json.count {
-                    print(json[i]["body"]!)
-                    print(json[i]["created_by"]!)
+                    //print(json[i]["body"]!)
+                    //print(json[i]["created_by"]!)
                     
                     var userID: Int
                     if let num = (json[i]["created_by"] as? NSString)?.integerValue {
@@ -328,9 +328,8 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
         let messageUserID = self.messagesArray[indexPath.row].userid
-        print(messageUserID)
-        print(self.usersArray.count)
-//        print("FUCK")
+        //print(messageUserID)
+        //print(self.usersArray.count)
         
         cell.textLabel?.text = self.usersArray[messageUserID - 1]
         cell.detailTextLabel?.text = self.messagesArray[indexPath.row].message
