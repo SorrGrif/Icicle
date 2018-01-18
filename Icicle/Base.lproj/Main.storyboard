@@ -780,6 +780,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bT9-rP-Cp8" secondAttribute="trailing" id="1f9-yo-aah"/>
                             <constraint firstItem="70I-n4-SKA" firstAttribute="top" secondItem="FWl-51-dqq" secondAttribute="top" id="N28-yf-qOM"/>
@@ -789,6 +790,9 @@
                             <constraint firstItem="bT9-rP-Cp8" firstAttribute="leading" secondItem="FWl-51-dqq" secondAttribute="leading" id="lBj-ll-vfd"/>
                             <constraint firstItem="70I-n4-SKA" firstAttribute="leading" secondItem="bT9-rP-Cp8" secondAttribute="leading" id="s32-jQ-kUo"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dQK-nR-ECd" appends="YES" id="PEG-Uw-8qb"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="messageInput" destination="pEc-o3-BED" id="LR0-LS-Ugp"/>
@@ -796,6 +800,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="My8-lX-6Z9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dQK-nR-ECd">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="I5P-VB-rek" id="wxk-qb-CNU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-167.19999999999999" y="-642.72863568215894"/>
         </scene>

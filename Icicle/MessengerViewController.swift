@@ -336,4 +336,10 @@ class MessangerViewController: UIViewController, UITableViewDelegate, UITableVie
 //        cell.detailTextLabel?.preferredMaxLayoutWidth = messagesTableView.bounds.width
         return cell
     }
+    
+    @IBAction func dismissKeyboard()
+    {
+        self.view.endEditing(true)
+    }
+
 }
